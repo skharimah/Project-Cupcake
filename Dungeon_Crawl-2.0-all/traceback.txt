@@ -1,0 +1,26 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 35, in script call
+  File "game/dungeon.rpy", line 129, in script
+  File "game/dungeon.rpy", line 131, in python
+IndexError: list assignment index out of range
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "C:\Users\Jordan\Google Drive\Virginia Tech\Spring 2015\VGdevGroup\Dungeon_Crawl-2.0-all\Dungeon_Crawl-2.0-all\renpy\execution.py", line 294, in run
+    node.execute()
+  File "C:\Users\Jordan\Google Drive\Virginia Tech\Spring 2015\VGdevGroup\Dungeon_Crawl-2.0-all\Dungeon_Crawl-2.0-all\renpy\ast.py", line 732, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Jordan\Google Drive\Virginia Tech\Spring 2015\VGdevGroup\Dungeon_Crawl-2.0-all\Dungeon_Crawl-2.0-all\renpy\python.py", line 1358, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/dungeon.rpy", line 131, in <module>
+    here.stage.mapped[i.y][i.x]=1
+  File "C:\Users\Jordan\Google Drive\Virginia Tech\Spring 2015\VGdevGroup\Dungeon_Crawl-2.0-all\Dungeon_Crawl-2.0-all\renpy\python.py", line 487, in do_mutation
+    return method(self, *args, **kwargs)
+IndexError: list assignment index out of range
+
+Windows-post2008Server-6.2.9200
+Ren'Py 6.17.0.279
+Dungeon_Crawl 2.0
