@@ -1,7 +1,6 @@
 ﻿# This file is in the public domain.
 
 init -1 python:
-    
     from copy import copy
         
     class Skill(object):        
@@ -63,8 +62,23 @@ style skill_button_text:
     xminimum 200
                 
 label battle(player, enemy):
+    python:
+        import random
     # To start battling, call this label with 2 actor objects: player and enemy.
-    
+          # Create skills (name, type, hit, power)
+        attack = Skill("Attack", "attack", 100, 40)
+        escape = Skill("Escape", "escape")
+        
+        # Create battle actors (name, max_hp, skills)
+        hero = Actor("Hero",1000, [attack,escape])
+        goblin = Actor("Goblin",20, [attack])
+        fireSprite = Actor("Fire Sprite",50, [attack])
+        orc = Actor("Joseph", 40, [attack])
+        dog = Actor("Stephen", 5, [escape])
+        adorableKitten = Actor("Feline",1,[attack])
+        
+        enemySet = [goblin, fireSprite, orc, dog]
+        enemy = random.choice(enemySet)
     # Preparation
     # Copying enemy object prevents modifying an original data.
     $ enemy=copy(enemy) 

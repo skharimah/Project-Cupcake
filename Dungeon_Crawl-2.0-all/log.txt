@@ -1,4 +1,4 @@
-Sat Jan 31 14:31:42 2015
+Sat Jan 31 15:47:09 2015
 Windows-post2008Server-6.2.9200
 Ren'Py 6.17.0.279
 Dungeon_Crawl 2.0
@@ -351,11 +351,11 @@ Texture testing:
 Performance test:
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.004000 seconds.
-- Frame drawn at 0.009000 seconds.
+- Frame drawn at 0.006000 seconds.
 - Frame drawn at 0.011000 seconds.
-- Frame drawn at 0.027000 seconds.
-- 0.027000 seconds to render 5 frames.
+- Frame drawn at 0.021000 seconds.
+- Frame drawn at 0.040000 seconds.
+- 0.040000 seconds to render 5 frames.
 Deallocating textures.
 Done deallocating textures.
 About to quit GL.
