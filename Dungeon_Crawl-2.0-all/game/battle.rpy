@@ -83,6 +83,8 @@ label battle(player, enemy):
     # Copying enemy object prevents modifying an original data.
     $ enemy=copy(enemy) 
     $ _rollback=False
+    # Start battle music, stop dungeon music
+    play stage_music "battle_song.wav"
     show screen battle_ui
     "[enemy.name] appeared"
     
@@ -98,6 +100,8 @@ label battle(player, enemy):
     elif _return is "escape":
         "You escaped"        
     hide screen battle_ui
+    # Start dungeon music, stop battle music, return to map
+    play stage_music "dungeon_song.wav"
     $ _rollback=True
     return
     
