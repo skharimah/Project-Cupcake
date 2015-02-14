@@ -1,7 +1,8 @@
 ﻿# This file is in the public domain.
 
 init -1 python:
-    
+    #   Registers a new audio channel stage_music
+    renpy.music.register_channel("stage_music", "music", True)
     class Stage(object):
         
         '''
@@ -97,7 +98,8 @@ image right2 = Transform("left2.png", xzoom=-1)
 label dungeon:
     # To start exploring, call or jump to this label
     # To exit, create an event which has return or jump statement.
-    
+    # Start music once dungeon is called
+    play stage_music "dungeon_song.wav"
     while True:
         # Calculate relative coordinates
         python:            
